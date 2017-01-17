@@ -14,5 +14,29 @@ end
 
 
 ok = OceanKit::Client.new(OceanKit.key)
-
-puts ok.account.info
+# droplet = {
+#   "name": "example.com",
+#   "region": "nyc3",
+#   "size": "512mb",
+#   "image": "ubuntu-14-04-x64",
+#   "backups": false,
+#   "ipv6": true,
+#   "tags": [
+#     "web"
+#   ]
+# }
+droplets = {
+  "names": [
+    "sub-01.example.com",
+    "sub-02.example.com"
+  ],
+  "region": "nyc3",
+  "size": "512mb",
+  "image": "ubuntu-14-04-x64",
+  "backups": false,
+  "ipv6": true,
+  "tags": [
+    "web-2-0"
+  ]
+}
+puts ok.droplets.delete("39709144")

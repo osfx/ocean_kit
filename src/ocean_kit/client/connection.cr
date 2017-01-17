@@ -5,7 +5,7 @@ module OceanKit
 		module Connection
 			# options = {} of String => String
 
-			def get(path, options)
+			def get(path, options = nil)
 				request "GET", path, options
 			end
 
@@ -17,12 +17,12 @@ module OceanKit
 				request "PUT", path, options
 			end
 
-			def delete(path, options)
+			def delete(path, options = nil)
 				request "DELETE", path, options
 			end
 
 			def request(http_method, path, options)
-				response = HTTP::Client.exec(method: http_method, url: "#{@uri}/#{path}", headers: @headers, body: @options.to_json)
+				response = HTTP::Client.exec(method: http_method, url: "#{@uri}/#{path}", headers: @headers, body: options.to_json)
 				response.body
 			end
 
