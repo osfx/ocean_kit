@@ -1,22 +1,18 @@
+require "./client/connection"
+require "./client/account"
+
+
 module OceanKit
 	class Client
+		include OceanKit::Client::Account
+		include OceanKit::Client::Connection
+
+		@options = {} of String => String
 
 		def initialize(api_key : String)
-			@key = api_key
+			@uri = URI.parse("https://api.digitalocean.com/v2")
+			@headers = HTTP::Headers{"Authorization" => "Bearer #{api_key}", "Content-Type" => "application/json"}
 		end
-
-		def droplets
-			# @uri = "/account/keys"
-			droplets = OceanKit::API::Droplets.new @key
-			return droplets
-		end
-
-		def ssh_keys
-
-			ssh_keys  = OceanKit::API::SSHKeys.new @key
-			return ssh_keys
-		end
-
 
 	end
 end
