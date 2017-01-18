@@ -19,6 +19,26 @@ dependencies:
 
 ```crystal
 require "ocean_kit"
+
+
+
+ok = OceanKit::Client.new(OceanKit.key)
+
+
+
+droplet = {
+  "name": "example.com",
+  "region": "nyc3",
+  "size": "512mb",
+  "image": "ubuntu-14-04-x64",
+  "tags": [
+    "web"
+  ]
+}
+
+
+ok.droplets.create(droplet.to_json)
+
 ```
 
 
