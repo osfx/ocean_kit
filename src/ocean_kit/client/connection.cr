@@ -17,15 +17,19 @@ module OceanKit
 				request "PUT", path, options
 			end
 
-			def delete(path, options = nil)
+			# NOTE: Method with delete name crash system
+			def destroy(path, options = nil)
 				request "DELETE", path, options
 			end
 
 			def request(http_method, path, options)
-				response = HTTP::Client.exec(method: http_method, url: "#{@uri}/#{path}", headers: @headers, body: options.to_json)
-				response.body
+				response = HTTP::Client.exec(method: http_method, url: "#{@uri}/#{path}", headers: @headers, body: options)
+				if response.status_code == 204
+					return "ok"
+				else
+					response.body
+				end
 			end
-
 		end
 	end
 end

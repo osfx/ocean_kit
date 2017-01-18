@@ -1,21 +1,19 @@
 module OceanKit
-	class Client
-		module SSHKeyResource
-
+	module SSHKeyResource
 			def ssh_key
 				self
 			end
 
 			def all
-				get("/account/keys", @options)
+				get("/account/keys", options)
 			end
 
 			def create
-				
+
 			end
 
 			def find(id)
-				get("/account/keys/#{id}", @options)
+				get("/account/keys/#{id}")
 			end
 
 			def delete
@@ -28,5 +26,4 @@ module OceanKit
 				put("/account/keys/#{id}", params)
 			end
 		end
-	end
 end

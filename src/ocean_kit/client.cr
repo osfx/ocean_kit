@@ -5,9 +5,9 @@ module OceanKit
 	class Client
 		# @options = {} of String => String
 
-		include OceanKit::Client::Account
+		include OceanKit::AccountResource
 		include OceanKit::Client::Connection
-		include OceanKit::Client::SSHKeyResource
+		# include OceanKit::Client::SSHKeyResource
 		include OceanKit::DropletResource
 
 		def initialize(api_key : String)
