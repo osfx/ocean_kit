@@ -9,6 +9,10 @@ module OceanKit
 		include OceanKit::Client::Connection
 		# include OceanKit::Client::SSHKeyResource
 		include OceanKit::DropletResource
+		include OceanKit::ImageActionResource
+		include OceanKit::RegionResource
+		include OceanKit::SizeResource
+
 
 		def initialize(api_key : String)
 			@uri = URI.parse("https://api.digitalocean.com/v2")

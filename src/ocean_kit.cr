@@ -31,4 +31,4 @@ ok = OceanKit::Client.new(OceanKit.key)
 # }
 
 
-puts ok.droplets.delete_for_tag("xxx")
+puts ok.droplets.regions.all
