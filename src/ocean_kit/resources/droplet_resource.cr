@@ -22,7 +22,7 @@ module OceanKit
 		end
 
 		def delete_for_tag(tag)
-			delete("/droplets?tag_name=#{tag}")
+			destroy("/droplets?tag_name=#{tag}")
 		end
 
 		def find(id)

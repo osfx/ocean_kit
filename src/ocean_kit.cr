@@ -31,4 +31,4 @@ ok = OceanKit::Client.new(OceanKit.key)
 # }
 
 
-puts ok.droplets.regions.all
+puts ok.droplets.images.all

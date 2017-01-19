@@ -5,6 +5,10 @@ module OceanKit
 			self
 		end
 
+		def all(id)
+			get("/images/#{id}/actions")
+		end
+
 		# Convert an Image to a snapshot,
 		# for example, a backup to a snapshot.
 		def convert_to_snapshot(id)
