@@ -9,6 +9,7 @@ module OceanKit
 		include OceanKit::Client::Connection
 		# include OceanKit::Client::SSHKeyResource
 		include OceanKit::DropletResource
+		include OceanKit::ImageResource
 		include OceanKit::ImageActionResource
 		include OceanKit::RegionResource
 		include OceanKit::SizeResource
