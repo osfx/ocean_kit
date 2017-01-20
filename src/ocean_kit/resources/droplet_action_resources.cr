@@ -5,11 +5,6 @@ module OceanKit
 			self
 		end
 
-
-
-
-
-
 		def reboot(id)
 			post("/droplets/#{id}/actions", {"type": "reboot"})
 		end
