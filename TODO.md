@@ -92,20 +92,20 @@
 
 ##### **SSH key resource**
 
-* [ ]`client.ssh_keys.all()`
-* [ ]`client.ssh_keys.create(ssh_key)`
-* [ ]`client.ssh_keys.find(id: 'id')`
-* [ ]`client.ssh_keys.delete(id: 'id')`
-* [ ]`client.ssh_keys.update(ssh_key, id: 'id')`
+* [x]`client.ssh_keys.all()`
+* [x]`client.ssh_keys.create(ssh_key)`
+* [x]`client.ssh_keys.find(id: 'id')`
+* [x]`client.ssh_keys.delete(id: 'id')`
+* [x]`client.ssh_keys.update(ssh_key, id: 'id')`
 
 ##### **Account resource**
 * [x] `client.account.info()`
 
 ##### **Floating IP resource**
-* [ ] `client.floating_ips.all()`
-* [ ] `client.floating_ips.find(ip: 'ip address')`
-* [ ] `client.floating_ips.create(floating_ip)`
-* [ ] `client.floating_ips.delete(ip: 'ip address')`
+* [x] `client.floating_ips.all()`
+* [x] `client.floating_ips.find(ip: 'ip address')`
+* [x] `client.floating_ips.create(floating_ip)`
+* [x] `client.floating_ips.delete(ip: 'ip address')`
 
 ##### **Floating IP Action resource**
 
@@ -114,12 +114,12 @@
 
 ##### **Volume resource**
 
-* [ ] `client.volumes.all()`
-* [ ] `client.volumes.find(id: 'id')`
-* [ ] `client.volumes.create(volume)`
-* [ ] `client.volumes.snapshots(id: 'id')`
-* [ ] `client.volumes.create_snapshot(id: 'id', name: 'snapshot-name')`
-* [ ] `client.volumes.delete(id: 'id')`
+* [x] `client.volumes.all()`
+* [x] `client.volumes.find(id: 'id')`
+* [x] `client.volumes.create(volume)`
+* [x] `client.volumes.snapshots(id: 'id')`
+* [x] `client.volumes.create_snapshot(id: 'id', name: 'snapshot-name')`
+* [x] `client.volumes.delete(id: 'id')`
 
 ##### **Volume Action resource**
 

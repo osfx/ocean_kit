@@ -8,8 +8,8 @@ module OceanKit
 				get("/account/keys", options)
 			end
 
-			def create
-
+			def create(options)
+				get("/account/keys", options)
 			end
 
 			def find(id)
@@ -17,6 +17,7 @@ module OceanKit
 			end
 
 			def delete
+				dstroy("/account/keys/#{id}")
 			end
 
 			def update(id, new_name)
