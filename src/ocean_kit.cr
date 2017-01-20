@@ -11,9 +11,9 @@ module OceanKit
     return key["API-KEY"].to_s
   end
 end
-
-
-ok = OceanKit::Client.new(OceanKit.key)
-
-
-puts ok.droplets.images.all
+# 
+# #
+# ok = OceanKit::Client.new(OceanKit.key)
+# #
+# #
+# puts ok.account.info

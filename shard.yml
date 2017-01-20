@@ -5,3 +5,9 @@ authors:
   - osfx <osfx@yandex.com>
 
 license: MIT
+
+
+development_dependencies:
+  spec2:
+    github: waterlink/spec2.cr
+    version: ~> 0.9
