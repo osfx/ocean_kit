@@ -109,8 +109,8 @@
 
 ##### **Floating IP Action resource**
 
-* [ ]`client.floating_ip_actions.assign(ip: floating_ip.ip, droplet_id: droplet.id)`
-* [ ]`client.floating_ip_actions.unassign(ip: floating_ip.ip)`
+* [x]`client.floating_ip_actions.assign(ip: floating_ip.ip, droplet_id: droxlet.id)`
+* [x]`client.floating_ip_actions.unassign(ip: floating_ip.ip)`
 
 ##### **Volume resource**
 
@@ -123,12 +123,12 @@
 
 ##### **Volume Action resource**
 
-* [ ] `client.volume_actions.attach(volume_id: volume.id, droplet_id: droplet.id, region: droplet.region.slug)`
-* [ ] `client.volume_actions.detach(volume_id: volume.id, droplet_id: droplet.id, region: droplet.region.slug)`
-* [ ] `client.volume_actions.resize(volume_id: volume.id, size_gigabytes: 123, region: droplet.region.slug)`
+* [x] `client.volume_actions.attach(volume_id: volume.id, droplet_id: droxlet.id, region: droplet.region.slug)`
+* [x] `client.volume_actions.detach(volume_id: volume.id, droplet_id: droxlet.id, region: droplet.region.slug)`
+* [x] `client.volume_actions.resize(volume_id: volume.id, size_gigabytes: 123, region: droplet.region.slug)`
 
 ##### **Volume resource**
 
-* [ ] `client.snapshots.all(resource_type: 'droplet')`
-* [ ] `client.snapshots.find(id: 'id')`
-* [ ] `client.snapshots.delete(id: 'id')`
+* [x] `client.snapshots.all(resource_type: 'droplet')`
+* [x] `client.snapshots.find(id: 'id')`
+* [x] `client.snapshots.delete(id: 'id')`
