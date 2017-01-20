@@ -1,26 +1,31 @@
 module OceanKit
 	class VolumeResource
-		# def volumes
-		# 	self
-		# end
+		def volumes
+			self
+		end
+
+		def all
+			get("/volumes")
+		end
 		#
-		# def all
-		# 	get("/snapshots")
-		# end
-		#
-		# def create(id, options)
-		# 	post("/domains/#{id}/records", options)
-		# end
-		#
-		# def find(name, id)
-		# 	get("/domains/#{name}/records/#{id}")
-		# end
-		# def update(options)
-		# 	put("/domain/#{name}/records/#{id}", options)
-		# end
-		#
-		# def delete(name, id)
-		# 	destroy("/domains/#{name}/records/#{id}")
-		# end
+		def create(options)
+			post("/volumes", options)
+		end
+
+		def find(volume_id)
+			get("/volumes/#{volume_id}", options)
+		end
+
+		def snapshots(volume_id)
+			get("/volumes/#{volume_id}/snapshots")
+		end
+
+		def create_snapshot(volume_id, name)
+			post("/volumes/#{volume_id}/snapshots", %({"name":"#{name}"}))
+		end
+
+		def delete(name, id)
+			destroy("/volumes/#{volume_id}")
+		end
 	end
 end
