@@ -15,20 +15,5 @@ end
 
 ok = OceanKit::Client.new(OceanKit.key)
 
-#
-# droplets = {
-#   "names": [
-#     "sub-01.example.com",
-#     "sub-02.example.com"
-#   ],
-#   "region": "nyc3",
-#   "size": "512mb",
-#   "image": "ubuntu-14-04-x64",
-#   "ipv6": true,
-#   "tags": [
-#     "xxx"
-#   ]
-# }
-
 
 puts ok.droplets.images.all
