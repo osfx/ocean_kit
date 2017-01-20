@@ -4,7 +4,7 @@ require "./resources/**"
 module OceanKit
 	class Client
 		# @options = {} of String => String
-
+		property uri
 		include OceanKit::AccountResource
 		include OceanKit::Client::Connection
 		# include OceanKit::Client::SSHKeyResource
