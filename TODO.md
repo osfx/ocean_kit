@@ -50,19 +50,19 @@
 * [ ] `client.droplet_actions.action_for_tag(tag: 'tag_name', type: 'event_name', param: 'value')`
 
 ##### **Domain resource**
-* [ ] `client.domains.all()`
-* [ ] `client.domains.create(domain)`
-* [ ] `client.domains.find(name: 'name')`
-* [ ] `client.domains.delete(name: 'name')`
+* [x] `client.domains.all()`
+* [x] `client.domains.create(domain)`
+* [x] `client.domains.find(name: 'name')`
+* [x] `client.domains.delete(name: 'name')`
 
 
 ##### **Domain record resource**
 
-* [ ] `client.domain_records.all(for_domain: 'for_domain')`
-* [ ] `client.domain_records.create(domain_record, for_domain: 'for_domain')`
-* [ ] `client.domain_records.find(for_domain: 'for_domain', id: 'id')`
-* [ ] `client.domain_records.delete(for_domain: 'for_domain', id: 'id')`
-* [ ] `client.domain_records.update(domain_record, for_domain: 'for_domain', id: 'id')`
+* [x] `client.domain_records.all(for_domain: 'for_domain')`
+* [x] `client.domain_records.create(domain_record, for_domain: 'for_domain')`
+* [x] `client.domain_records.find(for_domain: 'for_domain', id: 'id')`
+* [x] `client.domain_records.delete(for_domain: 'for_domain', id: 'id')`
+* [x] `client.domain_records.update(domain_record, for_domain: 'for_domain', id: 'id')`
 
 
 ##### **Image resource**
@@ -84,11 +84,11 @@
 
 
 ##### **Region resource**
-* [ ] `client.regions.all()`
+* [x] `client.regions.all()`
 
 
 ##### **Size resource**
-* [ ] `client.sizes.all()`
+* [x] `client.sizes.all()`
 
 ##### **SSH key resource**
 
