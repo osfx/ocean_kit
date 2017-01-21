@@ -1,4 +1,3 @@
-require "./models/**"
 require "./client/**"
 require "./resources/**"
 
@@ -7,13 +6,23 @@ module OceanKit
 		# @options = {} of String => String
 		property uri
 		include OceanKit::AccountResource
-		include OceanKit::Client::Connection
-		# include OceanKit::Client::SSHKeyResource
+		include OceanKit::DomainResource
+		include OceanKit::DomainRecordResource
+		include OceanKit::DropletActionsResource
 		include OceanKit::DropletResource
-		include OceanKit::ImageResource
+		include OceanKit::FloatingIpActionResource
+		include OceanKit::FloatingIpsResource
 		include OceanKit::ImageActionResource
+		include OceanKit::ImageResource
 		include OceanKit::RegionResource
 		include OceanKit::SizeResource
+		include OceanKit::SnapshotResource
+		include OceanKit::SSHKeyResource
+		include OceanKit::VolumeActionResource
+		include OceanKit::VolumeResource
+
+		include OceanKit::Client::Connection
+
 
 
 		def initialize(api_key : String)
@@ -23,3 +32,11 @@ module OceanKit
 
 	end
 end
+
+#
+# def account(requ, &)
+# end
+#
+# def info
+# 	get("/account")
+# end

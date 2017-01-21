@@ -1,11 +1,11 @@
 module OceanKit
-	class DomainResource
+	module DomainResource
 		def domains
 			self
 		end
 
 		def all
-			get("/domains/#{id}/records")
+			get("/domains")
 		end
 
 		def create(id, options)

@@ -1,19 +1,30 @@
 module OceanKit
-	class DomainRecordResource
+	# Domain record resources are used to set or retrieve information
+	# about the individual DNS records configured for a domain. This
+	# allows you to build and manage DNS zone files by adding and modifying
+	# individual records for a domain.
+	#
+	# There is also an additional field called id that is auto-assigned
+	# for each record and used as a unique identifier for requests. Each
+	# record contains all of these attribute types. For record types that
+	# do not utilize all fields, a value of null will be set for that record.
+
+	module DomainRecordResource
 		def domain_records
 			self
 		end
-
-		def all
-			get("/domains/#{id}/records")
+		# To get a listing of all records configured for a domain, send a GET
+		# request to /v2/domains/$DOMAIN_NAME/records
+		def all(domain_name)
+			get("/domains/#{domain_name}/records")
 		end
 
-		# def create(name, ip)
-		# 	options = {
-		# 		"name" => name,	"ip" => ip
-		# 	}
-		# 	post("/domains/", options)
-		# end
+		def create(domain, options)
+			# options = {
+			# 	"name" => name,	"ip" => ip
+			# }
+			post("/domains/#{domain}", options)
+		end
 		#
 		# def find(name)
 		# 	get("/domains/#{id}")

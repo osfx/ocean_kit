@@ -1,5 +1,10 @@
 module OceanKit
-	class VolumeResource
+	# Show information about a Block Storage volume
+	# The response will be a `JSON` object with a key called volume
+	# ### References
+	# [](https://developers.digitalocean.com/documentation/v2/#ssh-keys)
+
+	module VolumeResource
 		def volumes
 			self
 		end
