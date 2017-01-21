@@ -8,7 +8,7 @@ module OceanKit
 	#
 	# `Floating IP` are bound to a specific region.
 	#
-	class FloatingIpActionResource
+	module FloatingIpsResource
 
 		def floating_ips
 			self

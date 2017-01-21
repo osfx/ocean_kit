@@ -1,5 +1,5 @@
 module OceanKit
-	class VolumeActionResource
+	module VolumeActionResource
 
 		def volume_actions
 			self

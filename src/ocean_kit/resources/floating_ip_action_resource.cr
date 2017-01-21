@@ -1,5 +1,5 @@
 module OceanKit
-	class FloatingIpActionResource
+	module FloatingIpActionResource
 
 		def floating_ip_actions
 			self
@@ -10,7 +10,7 @@ module OceanKit
 		end
 
 		def deattach(id)
-			post("volumes/#{id}/actions", ({"type":"unassign"}))
+			post("volumes/#{id}/actions", ({"type" => "unassign"}))
 		end
 
 	end

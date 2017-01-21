@@ -1,3 +1,5 @@
+require "./ocean_kit/models/**"
+
 require "./ocean_kit/**"
 require "http/client"
 require "json"
