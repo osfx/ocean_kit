@@ -3,7 +3,13 @@ module OceanKit
 	class Client
 
 		module Connection
-			# options = {} of String => String
+			@@uri = "https://api.digitalocean.com/v2"
+			@@headers : HTTP::Headers|Nil
+			# @@options : String|Nil
+
+			# def headers(headers = nil)
+			# 	@@headers|= headers if headers
+			# end
 
 			def get(path, options = nil)
 				request "GET", path, options
@@ -23,7 +29,8 @@ module OceanKit
 			end
 
 			def request(http_method, path, options)
-				response = HTTP::Client.exec(method: http_method, url: "#{@uri}/#{path}", headers: @headers, body: options)
+				# options.to_json if options != String
+				response = HTTP::Client.exec(method: http_method, url: URI.parse("#{@@uri+path}"), headers: @@headers, body: options)
 				if response.status_code == 204
 					return "ok"
 				else

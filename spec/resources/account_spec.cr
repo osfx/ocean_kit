@@ -1,9 +1,10 @@
 require "../spec_helper"
-
-describe OceanKit::AccountResource do
-  # subject { Reader.new }
-  #
-  # it "can find" do
-  #
-  # end
+# require "../../src/ocean_kit/resources/**"
+# require "../../src/ocean_kit/client/**"
+require "http/client"
+describe OceanKit::Resource do
+	it "worl" do
+		ok = OceanKit::Resource::Account.new
+		ok.info.to eq 1
+	end
 end
