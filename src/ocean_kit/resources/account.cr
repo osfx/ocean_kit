@@ -1,10 +1,6 @@
 module OceanKit
 	module Resource
-		module AccountResource
-			
-			def account
-				self
-			end
+		class Account < OceanKit::Resource::Base
 
 			def info
 				get("/account")
