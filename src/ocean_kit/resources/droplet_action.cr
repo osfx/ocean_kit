@@ -1,5 +1,6 @@
 module OceanKit
-	module DropletActionsResource
+	module Resource
+		class DropletAction
 
 		def droplet_actions
 			self
@@ -76,5 +77,6 @@ module OceanKit
 		# end
 
 
+		end
 	end
 end

@@ -1,14 +1,10 @@
-require "../src/ocean_kit"
+require "../ocean_kit/client/connection"
+require "../ocean_kit/resources/base"
+require "../src/ocean_kit/*"
+require "../src/ocean_kit/resources/*"
+require "../src/ocean_kit/client/*"
 require "./support/*"
-require "spec2"
-# require "spec"
-
-
-include Spec2::GlobalDSL
-Spec2.doc
-
-class Greeting
-	def greet(name)
-		"Hello, " + name
-	end
-end
+# require "spec2"
+require "spec"
+require "http/client"
+require "webmock"
