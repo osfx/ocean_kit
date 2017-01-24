@@ -1,42 +1,31 @@
-require "./client/**"
-require "./resources/**"
+require "./client/*"
+# require "./resources/**"
 
 module OceanKit
 	class Client
-		# include OceanKit::DomainResource
-		# include OceanKit::DomainRecordResource
-		include OceanKit::DropletActionsResource
-		include OceanKit::DropletResource
-		include OceanKit::FloatingIpActionResource
-		include OceanKit::FloatingIpsResource
-		include OceanKit::ImageActionResource
-		include OceanKit::ImageResource
-		include OceanKit::RegionResource
-		include OceanKit::SizeResource
-		include OceanKit::SnapshotResource
-		include OceanKit::SSHKeyResource
-		include OceanKit::VolumeActionResource
-
-		# include OceanKit::Client::Connection
+		RESOURCES = {
+			"domain" => :Domain, "domain_record" => :DomainRecord, "droplet_action" => :DropletAction,
+			"floating_ip_action" => :FloatingIpAction, "floating_ip" => :FloatingIp,
+			"image_action" => :ImageAction, "image" => :Image, "region" => :Region, "size" => :Size,
+			"snapshot" => :Snapshot, "ssh_key" => :SSHKey, "volume_action" => :VolumeAction
+		}
 
 		def initialize(api_key : String)
-			# @@uri = URI.parse("https://api.digitalocean.com/v2")
 			@@headers = HTTP::Headers{"Authorization" => "Bearer #{api_key}", "Content-Type" => "application/json"}
 		end
-		# Return Resource::Account object
-		#
+
 		def account
 			OceanKit::Resource::Account.new @@headers
 		end
-		# Return **`Resource::Domain`** object
-		#
-		def domains
-			OceanKit::Resource::Domain.new @@headers
+
+		def droplets
+			OceanKit::Resource::Droplet.new @@headers
 		end
-		# Return `Resource::Volume` object
-		#
-		def volumes
-			OceanKit::Resource::Volume.new @@headers
-		end
+
+		{% for method, class_name in RESOURCES %}
+			def {{method.id}}s
+				OceanKit::Resource:{{class_name}}.new @@headers
+			end
+		{% end %}
 	end
 end
