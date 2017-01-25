@@ -16,7 +16,9 @@ module OceanKit
     key = YAML.parse(File.read(".key"))
     return key["API-KEY"].to_s
   end
+
 end
 
 
-ok = OceanKit::Client.new(OceanKit.key)
+
+# ok = OceanKit::Client.new(OceanKit.key)

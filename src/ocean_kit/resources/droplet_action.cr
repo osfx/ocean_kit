@@ -57,12 +57,7 @@ module OceanKit
 
 
 		def rebuild(id, name)
-
-			options = {
-				"type": "rebuild",
-				"image": name
-			}
-			post("/droplets/#{id}/actions", options)
+			post("/droplets/#{id}/actions", %({"type":"rebuild","image":"#{name}"}))
 		end
 
 		def restore(id)

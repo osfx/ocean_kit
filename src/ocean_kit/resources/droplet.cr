@@ -63,7 +63,6 @@ module OceanKit
 			def actions(id)
 				get("/droplets/#{id}/actions")
 			end
-
 		end
 	end
 end
