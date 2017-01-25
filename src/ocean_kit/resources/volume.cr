@@ -30,7 +30,7 @@ module OceanKit
 				post("/volumes/#{volume_id}/snapshots", %({"name":"#{name}"}))
 			end
 
-			def delete(name, id)
+			def delete(volume_id)
 				destroy("/volumes/#{volume_id}")
 			end
 		end

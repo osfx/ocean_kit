@@ -20,11 +20,8 @@ module OceanKit
 				get("/domains/#{domain_name}/records")
 			end
 
-			def create(domain, options)
-				# options = {
-				# 	"name" => name,	"ip" => ip
-				# }
-				post("/domains/#{domain}", options)
+			def create(domain, name, ip)
+				post("/domains/#{domain}", %({"name":"#{name}","ip":"#{ip}"}))
 			end
 			#
 			def find(name)

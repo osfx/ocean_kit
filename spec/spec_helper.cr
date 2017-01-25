@@ -1,10 +1,9 @@
+# # require "webmock"
 require "../ocean_kit/client/connection"
 require "../ocean_kit/resources/base"
-require "../src/ocean_kit/*"
-require "../src/ocean_kit/resources/*"
-require "../src/ocean_kit/client/*"
-require "./support/*"
-# require "spec2"
-require "spec"
-require "http/client"
-require "webmock"
+require "../ocean_kit/resources/account"
+require "../ocean_kit/client"
+require "../ocean_kit"
+require "spec2"
+include Spec2::GlobalDSL
+Spec2.doc
