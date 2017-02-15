@@ -14,7 +14,7 @@ dependencies:
 
 
 ## Usage
-This client based on official API client [droplet_kit]("https://github.com/digitalocean/droplet_kit") writen in Ruby.
+This client based on official API client [droplet_kit](https://github.com/digitalocean/droplet_kit) writen in Ruby.
 So this means almost all methods work the same.
 
 ```ruby
