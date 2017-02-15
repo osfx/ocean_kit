@@ -7,8 +7,6 @@ require "http/client"
 require "json"
 require "yaml"
 
-
 module OceanKit
   extend self
 end
-
