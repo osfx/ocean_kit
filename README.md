@@ -6,7 +6,7 @@ It support almost everethyng the API can do.
 ## Installation
 Add this to your application's `shard.yml`:
 
-```
+```yaml
 dependencies:
   ocean_kit:
     github: osfx/ocean_kit
@@ -17,7 +17,7 @@ dependencies:
 This client based on official API client [droplet_kit](https://github.com/digitalocean/droplet_kit) writen in Ruby.
 So this means almost all methods work the same.
 
-```ruby
+```crystal
 require "ocean_kit"
 
 ocean_kit = OceanKit::Client.new("API-KEY")
@@ -51,7 +51,7 @@ ocean_kit.droplets.create(droplets)
 
 
 ## Available methods
-```ruby
+```crystal
 
 ocean_kit = OceanKit::Client.new("API-KEY")
 
