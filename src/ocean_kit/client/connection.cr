@@ -4,7 +4,7 @@ module OceanKit
 
     module Connection
       @@uri = "https://api.digitalocean.com/v2"
-      @@headers : HTTP::Headers|Nil
+      @@headers = HTTP::Headers|Nil
 
       def get(path, options = nil)
         request "GET", path, options
