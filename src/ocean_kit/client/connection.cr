@@ -18,7 +18,6 @@ module OceanKit
         request "PUT", path, options
       end
 
-      # NOTE: Method with delete name crash system
       def destroy(path, options = nil)
         request "DELETE", path, options
       end

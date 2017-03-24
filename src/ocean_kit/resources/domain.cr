@@ -38,7 +38,7 @@ module OceanKit
       def find(domain_name : String)
         get("/domains/#{domain_name}")
       end
-      # # Update an existing record
+      # Update an existing record
       # def update(options)
       # 	put("/domain/#{name}/records/#{id}", options)
       # end
