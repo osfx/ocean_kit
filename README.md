@@ -67,6 +67,12 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 ### Account
 * `ocean_kit.account.info`
 
+### Certificates
+* `ocean_kit.certificates.all`
+* `ocean_kit.certificates.find(id)`
+* `ocean_kit.certificates.create(options)`
+* `ocean_kit.certificates.delete(id)`
+
 ### Domain Records
 * `ocean_kit.domain_records.all(domain_name)`
 * `ocean_kit.domain_records.create(domain, name, ip)`
@@ -125,6 +131,17 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 * `ocean_kit.images.all_distribution`
 * `ocean_kit.images.all_application`
 * `ocean_kit.images.all_private`
+
+### Load Balancer
+* `ocean_kit.load_balancers.all`
+* `ocean_kit.load_balancers.find(id)`
+* `ocean_kit.load_balancers.create(options)`
+* `ocean_kit.load_balancers.create_with_tag(options)`
+* `ocean_kit.load_balancers.update(id, options)`
+* `ocean_kit.load_balancers.add_droplet(id, options)`
+* `ocean_kit.load_balancers.remove_droplet(id, options)`
+* `ocean_kit.load_balancers.add_rule(id, options)`
+* `ocean_kit.load_balancers.remove_rule(id, options)`
 
 ### Regions
 * `ocean_kit.regions.all`
