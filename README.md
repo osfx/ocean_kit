@@ -187,3 +187,4 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 ## Contributors
 
 - [osfx](https://github.com/osfx) osfx - creator, maintainer
+- [abudhu](https://github.com/abudhu) abudhu - contributor
