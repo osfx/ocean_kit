@@ -6,7 +6,8 @@ module OceanKit
       "domain" => :Domain, "domain_record" => :DomainRecord, "droplet_action" => :DropletAction,
       "floating_ip_action" => :FloatingIpAction, "floating_ip" => :FloatingIps,
       "image_action" => :ImageAction, "image" => :Image, "region" => :Region, "size" => :Size,
-      "snapshot" => :Snapshot, "ssh_key" => :SSHKey, "volume_action" => :VolumeAction
+      "snapshot" => :Snapshot, "ssh_key" => :SSHKey, "volume_action" => :VolumeAction,
+      "volume" => :Volume
     }
 
     def initialize(api_key : String)
