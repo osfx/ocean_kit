@@ -107,7 +107,7 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 ### Floating Ip
 * `ocean_kit.floating_ip_actions.attach(ip, droplet_id)`
 * `ocean_kit.floating_ip_actions.deattach(id)`
-* `ocean_kit.floating_ips.all(ip)`
+* `ocean_kit.floating_ips.all`
 * `ocean_kit.floating_ips.cretate(droplet_id)`
 * `ocean_kit.floating_ips.find(floating_ip)`
 * `ocean_kit.floating_ips.delete(floating_ip)`
@@ -139,11 +139,11 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 
 
 ### SSH Key
-* `ocean_kit.ssh_key.all`
-* `ocean_kit.ssh_key.create(name, public_key)`
-* `ocean_kit.ssh_key.find(id)`
-* `ocean_kit.ssh_key.delete(id)`
-* `ocean_kit.ssh_key.update(id)`
+* `ocean_kit.ssh_keys.all`
+* `ocean_kit.ssh_keys.create(name, public_key)`
+* `ocean_kit.ssh_keys.find(id)`
+* `ocean_kit.ssh_keys.delete(id)`
+* `ocean_kit.ssh_keys.update(id)`
 
 ### Volume Action
 * `ocean_kit.volume_actions.attach(volume_id, droplet_id)`
