@@ -4,7 +4,7 @@ module OceanKit
   class Client
     RESOURCES = {
       "domain" => :Domain, "domain_record" => :DomainRecord, "droplet_action" => :DropletAction,
-      "floating_ip_action" => :FloatingIpAction, "floating_ip" => :FloatingIp,
+      "floating_ip_action" => :FloatingIpAction, "floating_ip" => :FloatingIps,
       "image_action" => :ImageAction, "image" => :Image, "region" => :Region, "size" => :Size,
       "snapshot" => :Snapshot, "ssh_key" => :SSHKey, "volume_action" => :VolumeAction
     }
