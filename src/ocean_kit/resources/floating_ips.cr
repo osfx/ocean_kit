@@ -14,8 +14,8 @@ module OceanKit
       end
       # List all of the Floating IPs available on your account
       #
-      def all(ip)
-        post("/floating_ips")
+      def all
+        get("/floating_ips")
       end
       # On creation, a Floating IP must be either assigned
       # to a Droplet or reserved to a region
