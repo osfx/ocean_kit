@@ -67,6 +67,12 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 ### Account
 * `ocean_kit.account.info`
 
+### Certificates
+* `ocean_kit.certificates.all`
+* `ocean_kit.certificates.find(id)`
+* `ocean_kit.certificates.create(options)`
+* `ocean_kit.certificates.delete(id)`
+
 ### Domain Records
 * `ocean_kit.domain_records.all(domain_name)`
 * `ocean_kit.domain_records.create(domain, name, ip)`
@@ -107,7 +113,7 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 ### Floating Ip
 * `ocean_kit.floating_ip_actions.attach(ip, droplet_id)`
 * `ocean_kit.floating_ip_actions.deattach(id)`
-* `ocean_kit.floating_ips.all(ip)`
+* `ocean_kit.floating_ips.all`
 * `ocean_kit.floating_ips.cretate(droplet_id)`
 * `ocean_kit.floating_ips.find(floating_ip)`
 * `ocean_kit.floating_ips.delete(floating_ip)`
@@ -126,6 +132,17 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 * `ocean_kit.images.all_application`
 * `ocean_kit.images.all_private`
 
+### Load Balancer
+* `ocean_kit.load_balancers.all`
+* `ocean_kit.load_balancers.find(id)`
+* `ocean_kit.load_balancers.create(options)`
+* `ocean_kit.load_balancers.create_with_tag(options)`
+* `ocean_kit.load_balancers.update(id, options)`
+* `ocean_kit.load_balancers.add_droplet(id, options)`
+* `ocean_kit.load_balancers.remove_droplet(id, options)`
+* `ocean_kit.load_balancers.add_rule(id, options)`
+* `ocean_kit.load_balancers.remove_rule(id, options)`
+
 ### Regions
 * `ocean_kit.regions.all`
 
@@ -139,11 +156,11 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 
 
 ### SSH Key
-* `ocean_kit.ssh_key.all`
-* `ocean_kit.ssh_key.create(name, public_key)`
-* `ocean_kit.ssh_key.find(id)`
-* `ocean_kit.ssh_key.delete(id)`
-* `ocean_kit.ssh_key.update(id)`
+* `ocean_kit.ssh_keys.all`
+* `ocean_kit.ssh_keys.create(name, public_key)`
+* `ocean_kit.ssh_keys.find(id)`
+* `ocean_kit.ssh_keys.delete(id)`
+* `ocean_kit.ssh_keys.update(id)`
 
 ### Volume Action
 * `ocean_kit.volume_actions.attach(volume_id, droplet_id)`
@@ -170,3 +187,4 @@ ocean_kit = OceanKit::Client.new("API-KEY")
 ## Contributors
 
 - [osfx](https://github.com/osfx) osfx - creator, maintainer
+- [abudhu](https://github.com/abudhu) abudhu - contributor
