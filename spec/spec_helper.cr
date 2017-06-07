@@ -6,4 +6,4 @@ require "../ocean_kit/client"
 require "../ocean_kit"
 require "spec2"
 include Spec2::GlobalDSL
-Spec2.doc
+# Spec2.doc
